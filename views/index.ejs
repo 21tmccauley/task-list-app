@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List App</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Friday 26th, January</h1>
+    <button class="add-task-btn">Add new task</button>
+
+    <!-- Add Task Form -->
+    <form id="addTaskForm" action="/tasks" method="POST">
+      <input type="text" name="title" placeholder="Task Title" required>
+      <textarea name="description" placeholder="Task Description" required></textarea>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="task-list">
+      <div class="task-item">
+        <div class="task-header">
+          <h2>Daily Habits</h2>
+          <p>Write for at least 30 minutes</p>
+        </div>
+        <div class="task-details">
+          <h2>Daily Habits</h2>
+          <p>Sleep at least 7 hours</p>
+        </div>
+      </div>
+
+      <div class="task-item">
+        <div class="task-header">
+          <h2>Personal Projects</h2>
+          <p>Marketing strategy</p>
+        </div>
+        <div class="task-details">
+          <h2>Work</h2>
+          <p>Design website + launch</p>
+        </div>
+      </div>
+
+      <!-- Add more task items as needed -->
+
+    </div>
+  </div>
+
+  <script src="/js/src.js"></script>
+</body>
+</html>
