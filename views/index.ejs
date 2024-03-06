@@ -19,31 +19,21 @@
     </form>
 
     <div class="task-list">
-      <div class="task-item">
-        <div class="task-header">
-          <h2>Daily Habits</h2>
-          <p>Write for at least 30 minutes</p>
-        </div>
-        <div class="task-details">
-          <h2>Daily Habits</h2>
-          <p>Sleep at least 7 hours</p>
-        </div>
+        <% tasks.forEach(function(task) { %>
+          <div class="task-item">
+            <div class="task-header">
+              <h2><%= task.title %></h2>
+              <p><%= task.description %></p>
+            </div>
+            <div class="task-actions">
+              <button class="edit-task" data-task-id="<%= task._id %>">Edit</button>
+              <button class="delete-task" data-task-id="<%= task._id %>">Delete</button>
+            </div>
+          </div>
+        <% }); %>
       </div>
 
-      <div class="task-item">
-        <div class="task-header">
-          <h2>Personal Projects</h2>
-          <p>Marketing strategy</p>
-        </div>
-        <div class="task-details">
-          <h2>Work</h2>
-          <p>Design website + launch</p>
-        </div>
-      </div>
-
-      <!-- Add more task items as needed -->
-
-    </div>
+    
   </div>
 
   <script src="/js/src.js"></script>
